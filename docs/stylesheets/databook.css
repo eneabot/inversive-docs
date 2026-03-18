@@ -75,32 +75,28 @@ body::before {
   z-index: 10 !important;
 }
 
-/* Keep header inner row from overflowing */
-.md-header__inner {
-  display: flex !important;
-  align-items: center !important;
-  padding: 0 0.6rem !important;
-  overflow: hidden !important;
-  white-space: nowrap !important;
-}
-
+/* Hide site title in header — avoid overlap with tabs */
 .md-header__title {
-  font-family: var(--pk-title) !important;
-  font-size: 0.65rem !important;
-  letter-spacing: 0.06em !important;
-  text-transform: uppercase !important;
-  color: var(--pk-text) !important;
-  overflow: hidden !important;
-  text-overflow: ellipsis !important;
-  white-space: nowrap !important;
-  flex: 1 1 auto !important;
-  min-width: 0 !important;
+  display: none !important;
 }
 
-.md-header__title::before {
-  content: "◈ ";
-  color: var(--pk-red);
+/* Logo area — keep small ◈ icon only */
+.md-header__button.md-logo {
+  font-family: var(--pk-mono) !important;
+  font-size: 1rem !important;
+  color: var(--pk-red) !important;
+  padding: 0 0.4rem !important;
+}
+
+.md-header__button.md-logo::after {
+  content: "◈";
   animation: blink 2s step-end infinite;
+  color: var(--pk-red);
+}
+
+.md-header__button.md-logo img,
+.md-header__button.md-logo svg {
+  display: none !important;
 }
 
 @keyframes blink {
@@ -108,12 +104,33 @@ body::before {
   50%       { opacity: 0; }
 }
 
-/* ── Tabs ── */
+/* ── Tabs — horizontally scrollable ── */
 .md-tabs {
   background: #060b14 !important;
   border-bottom: 1px solid var(--pk-border) !important;
   position: relative !important;
   z-index: 9 !important;
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  -webkit-overflow-scrolling: touch !important;
+  scrollbar-width: thin !important;
+  scrollbar-color: var(--pk-border) transparent !important;
+}
+
+.md-tabs::-webkit-scrollbar {
+  height: 3px !important;
+}
+
+.md-tabs::-webkit-scrollbar-thumb {
+  background: var(--pk-border) !important;
+  border-radius: 2px !important;
+}
+
+.md-tabs__list {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  white-space: nowrap !important;
+  min-width: max-content !important;
 }
 
 .md-tabs__link {
