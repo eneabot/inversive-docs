@@ -24,8 +24,8 @@ theme:
         icon: material/brightness-7
         name: Passer en mode sombre
   font:
-    text: Exo 2
-    code: Share Tech Mono
+    text: Inter
+    code: JetBrains Mono
   features:
     - navigation.tabs
     - navigation.tabs.sticky
