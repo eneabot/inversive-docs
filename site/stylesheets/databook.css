@@ -71,14 +71,30 @@ body::before {
   border-bottom: 2px solid var(--pk-red) !important;
   box-shadow: 0 0 20px var(--pk-red-glow) !important;
   font-family: var(--pk-mono) !important;
+  position: relative !important;
+  z-index: 10 !important;
+}
+
+/* Keep header inner row from overflowing */
+.md-header__inner {
+  display: flex !important;
+  align-items: center !important;
+  padding: 0 0.6rem !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
 }
 
 .md-header__title {
   font-family: var(--pk-title) !important;
-  font-size: 0.75rem !important;
-  letter-spacing: 0.15em !important;
+  font-size: 0.65rem !important;
+  letter-spacing: 0.06em !important;
   text-transform: uppercase !important;
   color: var(--pk-text) !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+  flex: 1 1 auto !important;
+  min-width: 0 !important;
 }
 
 .md-header__title::before {
@@ -96,6 +112,8 @@ body::before {
 .md-tabs {
   background: #060b14 !important;
   border-bottom: 1px solid var(--pk-border) !important;
+  position: relative !important;
+  z-index: 9 !important;
 }
 
 .md-tabs__link {
