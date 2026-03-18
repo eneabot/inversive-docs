@@ -1,28 +1,31 @@
-site_name: Règles Métier — Plateforme Inversive
-site_description: Source de vérité pour toutes les règles métier de la plateforme Inversive (v4.0, 320+ règles)
+site_name: INVERSIVE DATA BOOK
+site_description: Règles Métier v4.0 — Source de vérité de la plateforme Inversive (320+ règles)
 site_author: Inversive
 docs_dir: docs
 site_dir: site
+
+extra_css:
+  - stylesheets/databook.css
 
 theme:
   name: material
   language: fr
   palette:
-    - scheme: default
-      primary: indigo
-      accent: indigo
-      toggle:
-        icon: material/brightness-7
-        name: Passer en mode sombre
     - scheme: slate
-      primary: indigo
-      accent: indigo
+      primary: black
+      accent: red
       toggle:
         icon: material/brightness-4
         name: Passer en mode clair
+    - scheme: default
+      primary: black
+      accent: red
+      toggle:
+        icon: material/brightness-7
+        name: Passer en mode sombre
   font:
-    text: Inter
-    code: JetBrains Mono
+    text: Exo 2
+    code: Share Tech Mono
   features:
     - navigation.tabs
     - navigation.tabs.sticky
