@@ -1,8 +1,8 @@
 # INVERSIVE DATA BOOK
 
 <div class="databook-hero">
-<h2>INVERSIVE DATA BOOK</h2>
-<p>v4.0 · Mars 2026 · Source of Truth — Règles Métier de la Plateforme Inversive</p>
+<h2>Inversive — Règles Métier</h2>
+<p>v4.0 · Mars 2026 · Source de vérité de la plateforme</p>
 <div class="stats">
   <div class="stat">
     <div class="stat-value">320+</div>
@@ -11,10 +11,6 @@
   <div class="stat">
     <div class="stat-value">24</div>
     <div class="stat-label">Modules</div>
-  </div>
-  <div class="stat">
-    <div class="stat-value">8</div>
-    <div class="stat-label">Composants</div>
   </div>
   <div class="stat">
     <div class="stat-value">v4.0</div>
