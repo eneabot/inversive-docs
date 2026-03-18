@@ -1,0 +1,126 @@
+site_name: Règles Métier — Plateforme Inversive
+site_description: Source de vérité pour toutes les règles métier de la plateforme Inversive (v4.0, 320+ règles)
+site_author: Inversive
+docs_dir: docs
+site_dir: site
+
+theme:
+  name: material
+  language: fr
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Passer en mode sombre
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Passer en mode clair
+  font:
+    text: Inter
+    code: JetBrains Mono
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.path
+    - navigation.indexes
+    - toc.follow
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.tooltips
+
+plugins:
+  - search:
+      lang: fr
+  - tags
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+      title: Sur cette page
+
+nav:
+  - Accueil: index.md
+  - Authentification & Comptes:
+    - 01-comptes/index.md
+    - Création & Activation: 01-comptes/creation-activation.md
+    - Connexion: 01-comptes/connexion.md
+    - Règles techniques: 01-comptes/technique.md
+  - Utilisateurs & Rôles:
+    - 02-utilisateurs/index.md
+    - Hiérarchie des rôles: 02-utilisateurs/roles.md
+    - Rôles personnalisés: 02-utilisateurs/roles-personnalises.md
+    - Statuts utilisateur: 02-utilisateurs/statuts.md
+    - Règles techniques: 02-utilisateurs/technique.md
+  - Structure organisationnelle:
+    - 03-structure/index.md
+    - Hiérarchie: 03-structure/hierarchie.md
+    - Archivage: 03-structure/archivage.md
+  - Expériences:
+    - 04-experiences/index.md
+    - Création: 04-experiences/creation.md
+    - Validation & Tests: 04-experiences/validation.md
+    - Disponibilité: 04-experiences/disponibilite.md
+    - Formats & Binaires: 04-experiences/binaires.md
+    - Invitations: 04-experiences/invitations.md
+    - Catalogue & Affichage: 04-experiences/catalogue.md
+    - Règles techniques: 04-experiences/technique.md
+  - Lancement d'expériences: 05-lancement/index.md
+  - Casques autonomes:
+    - 06-casques/index.md
+    - Configuration: 06-casques/configuration.md
+    - Profils: 06-casques/profils.md
+    - Actions: 06-casques/actions.md
+    - Réinitialisation: 06-casques/reinitialisation.md
+    - Règles techniques: 06-casques/technique.md
+  - Statistiques: 07-statistiques/index.md
+  - Bibliothèque d'assets:
+    - 08-assets/index.md
+    - Règles techniques: 08-assets/technique.md
+  - Guides d'utilisation: 09-guides/index.md
+  - SDK Inversive:
+    - 10-sdk/index.md
+    - Cycle de vie session: 10-sdk/session.md
+    - Stockage local: 10-sdk/stockage.md
+    - Reporting: 10-sdk/reporting.md
+    - Configuration: 10-sdk/configuration.md
+  - Personnalisation & Marque blanche: 11-personnalisation/index.md
+  - Compatibilité appareils: 12-compatibilite/index.md
+  - Événements publics: 13-evenements/index.md
+  - Lobby personnalisé: 14-lobby/index.md
+  - Localisation & Langues: 15-localisation/index.md
+  - Temps réel & SignalR: 16-temps-reel/index.md
+  - Applications & Composants:
+    - Headset Center: 17-headset-center/index.md
+    - Immersive Catalog: 18-immersive-catalog/index.md
+    - Service Android: 19-service-android/index.md
+    - Lobby casque: 20-lobby-casque/index.md
+    - Intégration LTI: 21-lti/index.md
+    - API Standalone: 22-api-standalone/index.md
+    - VideoPlayer Android: 23-videoplayer/index.md
+    - Application Blazor: 24-blazor/index.md
+  - Annexes:
+    - annexes/index.md
+    - Notes de conformité: annexes/conformite.md
+    - Correspondance terminologique: annexes/terminologie.md

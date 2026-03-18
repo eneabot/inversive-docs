@@ -1,0 +1,16 @@
+image: python:3.11-slim
+
+stages:
+  - deploy
+
+pages:
+  stage: deploy
+  before_script:
+    - pip install mkdocs-material mkdocs-tags-plugin 2>/dev/null || pip install mkdocs-material
+  script:
+    - mkdocs build --strict --site-dir public
+  artifacts:
+    paths:
+      - public
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
