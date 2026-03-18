@@ -1,0 +1,4121 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Source de vérité pour toutes les règles métier de la plateforme Inversive (v4.0, 320+ règles)">
+      
+      
+        <meta name="author" content="Inversive">
+      
+      
+      
+        <link rel="prev" href="../23-videoplayer/">
+      
+      
+        <link rel="next" href="../annexes/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
+    
+    
+      
+        <title>Application Blazor - Règles Métier — Plateforme Inversive</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#application-web-blazor-v40" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href=".." title="Règles Métier — Plateforme Inversive" class="md-header__button md-logo" aria-label="Règles Métier — Plateforme Inversive" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Règles Métier — Plateforme Inversive
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Application Blazor
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Passer en mode sombre"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Passer en mode sombre" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Passer en mode clair"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Passer en mode clair" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Recherche">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Partager" aria-label="Partager" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initialisation de la recherche
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Onglets" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Accueil
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../01-comptes/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Authentification & Comptes
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../02-utilisateurs/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Utilisateurs & Rôles
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../03-structure/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Structure organisationnelle
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../04-experiences/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Expériences
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../05-lancement/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Lancement d'expériences
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../06-casques/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Casques autonomes
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../07-statistiques/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Statistiques
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../08-assets/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Bibliothèque d'assets
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../09-guides/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Guides d'utilisation
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../10-sdk/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  SDK Inversive
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../11-personnalisation/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Personnalisation & Marque blanche
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../12-compatibilite/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Compatibilité appareils
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../13-evenements/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Événements publics
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../14-lobby/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Lobby personnalisé
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../15-localisation/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Localisation & Langues
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../16-temps-reel/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Temps réel & SignalR
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../17-headset-center/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Applications & Composants
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../annexes/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Annexes
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Règles Métier — Plateforme Inversive" class="md-nav__button md-logo" aria-label="Règles Métier — Plateforme Inversive" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Règles Métier — Plateforme Inversive
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Accueil
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../01-comptes/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Authentification & Comptes
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Authentification & Comptes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-comptes/creation-activation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Création & Activation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-comptes/connexion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Connexion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-comptes/technique/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Règles techniques
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../02-utilisateurs/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Utilisateurs & Rôles
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Utilisateurs & Rôles
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-utilisateurs/roles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hiérarchie des rôles
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-utilisateurs/roles-personnalises/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rôles personnalisés
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-utilisateurs/statuts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Statuts utilisateur
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-utilisateurs/technique/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Règles techniques
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../03-structure/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Structure organisationnelle
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Structure organisationnelle
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-structure/hierarchie/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hiérarchie
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-structure/archivage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Archivage
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../04-experiences/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Expériences
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Expériences
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-experiences/creation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Création
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-experiences/validation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Validation & Tests
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-experiences/disponibilite/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Disponibilité
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-experiences/binaires/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Formats & Binaires
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-experiences/invitations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Invitations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-experiences/catalogue/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Catalogue & Affichage
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-experiences/technique/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Règles techniques
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-lancement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lancement d'expériences
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../06-casques/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Casques autonomes
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Casques autonomes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-casques/configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-casques/profils/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Profils
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-casques/actions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Actions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-casques/reinitialisation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Réinitialisation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-casques/technique/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Règles techniques
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-statistiques/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Statistiques
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../08-assets/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bibliothèque d'assets
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_9" id="__nav_9_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Bibliothèque d'assets
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-assets/technique/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Règles techniques
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-guides/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guides d'utilisation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../10-sdk/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SDK Inversive
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_11" id="__nav_11_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    SDK Inversive
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-sdk/session/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cycle de vie session
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-sdk/stockage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stockage local
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-sdk/reporting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reporting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-sdk/configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-personnalisation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Personnalisation & Marque blanche
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-compatibilite/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compatibilité appareils
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13-evenements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Événements publics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../14-lobby/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lobby personnalisé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../15-localisation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Localisation & Langues
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../16-temps-reel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Temps réel & SignalR
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../17-headset-center/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Applications & Composants
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_18" id="__nav_18_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_18_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_18">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Applications & Composants
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../18-immersive-catalog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Immersive Catalog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../19-service-android/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Service Android
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20-lobby-casque/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lobby casque
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../21-lti/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Intégration LTI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../22-api-standalone/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API Standalone
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../23-videoplayer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VideoPlayer Android
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Application Blazor
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Application Blazor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Sur cette page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Sur cette page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#gestion-des-tokens-sessions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gestion des tokens &amp; sessions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Gestion des tokens &amp; sessions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rm-143-delai-de-grace-dexpiration-30-secondes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RM-143 — Délai de grâce d'expiration : 30 secondes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rm-144-renouvellement-du-token-mutex-pas-de-concurrence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RM-144 — Renouvellement du token : mutex (pas de concurrence)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rm-145-ordre-de-resolution-du-token" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RM-145 — Ordre de résolution du token
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rm-146-rehydratation-de-session-multi-onglet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RM-146 — Réhydratation de session multi-onglet
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authentification-autorisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Authentification &amp; Autorisation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Authentification &amp; Autorisation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rm-147-sources-dauthentification-autorisees" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RM-147 — Sources d'authentification autorisées
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rm-148-mode-querytoken-bypass-oidc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RM-148 — Mode queryToken : bypass OIDC
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rm-149-verification-hierarchique-des-roles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RM-149 — Vérification hiérarchique des rôles
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rm-150-admin-exempte-de-la-verification-de-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RM-150 — Admin exempté de la vérification de module
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rm-151-operateurs-andor-pour-les-verifications-multi-droits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RM-151 — Opérateurs AND/OR pour les vérifications multi-droits
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rm-152-impersonation-producer-et-user-exclus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RM-152 — Impersonation : Producer et User exclus
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#validations-de-formulaires" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Validations de formulaires
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Validations de formulaires">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rm-153-asset-company-obligatoire-pour-les-non-admin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RM-153 — Asset : company obligatoire pour les non-Admin
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rm-154-tags-dasset-obligatoires-si-categorie-selectionnee" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RM-154 — Tags d'asset obligatoires si catégorie sélectionnée
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rm-155-nombre-de-joueurs-plage-1-100" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RM-155 — Nombre de joueurs : plage [1, 100]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rm-156-formats-de-binaires-par-type-dexperience" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RM-156 — Formats de binaires par type d'expérience
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rm-157-externalapplicationtype-obligatoire" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RM-157 — ExternalApplicationType obligatoire
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rm-158-conversion-automatique-srt-vtt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RM-158 — Conversion automatique SRT → VTT
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rm-159-limite-dupload-client-2-go" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RM-159 — Limite d'upload client : 2 Go
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rm-160-screenshots-dexperience-formats-image-uniquement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RM-160 — Screenshots d'expérience : formats image uniquement
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rm-161-nombre-maximum-de-screenshots-dasset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RM-161 — Nombre maximum de screenshots d'asset
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#routage-navigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Routage &amp; Navigation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Routage &amp; Navigation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rm-162-page-daccueil-selon-le-role" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RM-162 — Page d'accueil selon le rôle
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rm-163-appareils-filtres-par-compatibilite-binaire" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RM-163 — Appareils filtrés par compatibilité binaire
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rm-164-url-de-retour-sauvegardee-avant-redirection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RM-164 — URL de retour sauvegardée avant redirection
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rm-165-module-lemonlearning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RM-165 — Module LemonLearning
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#temps-reel-signalr-cote-client" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Temps réel — SignalR côté client
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Temps réel — SignalR côté client">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rm-166-reconnexion-backoff-exponentiel-2n-secondes-max-60s" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RM-166 — Reconnexion : backoff exponentiel 2ⁿ secondes, max 60s
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rm-167-suivi-des-ack-par-commande" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RM-167 — Suivi des ACK par commande
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rm-168-etat-de-casting-par-appareil" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RM-168 — État de casting par appareil
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stockage-local-localstorage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stockage local (localStorage)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Stockage local (localStorage)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rm-169-profil-utilisateur-mis-en-cache" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RM-169 — Profil utilisateur mis en cache
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rm-170-admin-statisticsmodule-true-toujours" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RM-170 — Admin : StatisticsModule = true toujours
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rm-171-likes-mis-en-cache" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RM-171 — Likes mis en cache
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rm-172-langue-defaut-fr-fr-persistee" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RM-172 — Langue : défaut fr-FR, persistée
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rm-173-panier-dassets-persiste" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RM-173 — Panier d'assets persisté
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rm-174-acceptation-des-cgu-persistee" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RM-174 — Acceptation des CGU persistée
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recherche" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recherche
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Recherche">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rm-175-suppression-des-diacritiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RM-175 — Suppression des diacritiques
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comportements-ui" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comportements UI
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Comportements UI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rm-176-message-de-succes-masque-apres-2-secondes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RM-176 — Message de succès masqué après 2 secondes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rm-177-uptale-verification-a-3-niveaux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RM-177 — Uptale : vérification à 3 niveaux
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_19" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../annexes/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Annexes
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_19" id="__nav_19_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_19_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_19">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Annexes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../annexes/conformite/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notes de conformité
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../annexes/terminologie/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Correspondance terminologique
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Sur cette page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Sur cette page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#gestion-des-tokens-sessions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gestion des tokens &amp; sessions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Gestion des tokens &amp; sessions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rm-143-delai-de-grace-dexpiration-30-secondes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RM-143 — Délai de grâce d'expiration : 30 secondes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rm-144-renouvellement-du-token-mutex-pas-de-concurrence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RM-144 — Renouvellement du token : mutex (pas de concurrence)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rm-145-ordre-de-resolution-du-token" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RM-145 — Ordre de résolution du token
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rm-146-rehydratation-de-session-multi-onglet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RM-146 — Réhydratation de session multi-onglet
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authentification-autorisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Authentification &amp; Autorisation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Authentification &amp; Autorisation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rm-147-sources-dauthentification-autorisees" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RM-147 — Sources d'authentification autorisées
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rm-148-mode-querytoken-bypass-oidc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RM-148 — Mode queryToken : bypass OIDC
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rm-149-verification-hierarchique-des-roles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RM-149 — Vérification hiérarchique des rôles
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rm-150-admin-exempte-de-la-verification-de-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RM-150 — Admin exempté de la vérification de module
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rm-151-operateurs-andor-pour-les-verifications-multi-droits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RM-151 — Opérateurs AND/OR pour les vérifications multi-droits
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rm-152-impersonation-producer-et-user-exclus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RM-152 — Impersonation : Producer et User exclus
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#validations-de-formulaires" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Validations de formulaires
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Validations de formulaires">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rm-153-asset-company-obligatoire-pour-les-non-admin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RM-153 — Asset : company obligatoire pour les non-Admin
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rm-154-tags-dasset-obligatoires-si-categorie-selectionnee" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RM-154 — Tags d'asset obligatoires si catégorie sélectionnée
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rm-155-nombre-de-joueurs-plage-1-100" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RM-155 — Nombre de joueurs : plage [1, 100]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rm-156-formats-de-binaires-par-type-dexperience" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RM-156 — Formats de binaires par type d'expérience
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rm-157-externalapplicationtype-obligatoire" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RM-157 — ExternalApplicationType obligatoire
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rm-158-conversion-automatique-srt-vtt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RM-158 — Conversion automatique SRT → VTT
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rm-159-limite-dupload-client-2-go" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RM-159 — Limite d'upload client : 2 Go
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rm-160-screenshots-dexperience-formats-image-uniquement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RM-160 — Screenshots d'expérience : formats image uniquement
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rm-161-nombre-maximum-de-screenshots-dasset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RM-161 — Nombre maximum de screenshots d'asset
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#routage-navigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Routage &amp; Navigation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Routage &amp; Navigation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rm-162-page-daccueil-selon-le-role" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RM-162 — Page d'accueil selon le rôle
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rm-163-appareils-filtres-par-compatibilite-binaire" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RM-163 — Appareils filtrés par compatibilité binaire
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rm-164-url-de-retour-sauvegardee-avant-redirection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RM-164 — URL de retour sauvegardée avant redirection
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rm-165-module-lemonlearning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RM-165 — Module LemonLearning
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#temps-reel-signalr-cote-client" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Temps réel — SignalR côté client
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Temps réel — SignalR côté client">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rm-166-reconnexion-backoff-exponentiel-2n-secondes-max-60s" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RM-166 — Reconnexion : backoff exponentiel 2ⁿ secondes, max 60s
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rm-167-suivi-des-ack-par-commande" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RM-167 — Suivi des ACK par commande
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rm-168-etat-de-casting-par-appareil" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RM-168 — État de casting par appareil
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stockage-local-localstorage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stockage local (localStorage)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Stockage local (localStorage)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rm-169-profil-utilisateur-mis-en-cache" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RM-169 — Profil utilisateur mis en cache
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rm-170-admin-statisticsmodule-true-toujours" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RM-170 — Admin : StatisticsModule = true toujours
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rm-171-likes-mis-en-cache" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RM-171 — Likes mis en cache
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rm-172-langue-defaut-fr-fr-persistee" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RM-172 — Langue : défaut fr-FR, persistée
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rm-173-panier-dassets-persiste" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RM-173 — Panier d'assets persisté
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rm-174-acceptation-des-cgu-persistee" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RM-174 — Acceptation des CGU persistée
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recherche" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recherche
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Recherche">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rm-175-suppression-des-diacritiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RM-175 — Suppression des diacritiques
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comportements-ui" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comportements UI
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Comportements UI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rm-176-message-de-succes-masque-apres-2-secondes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RM-176 — Message de succès masqué après 2 secondes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rm-177-uptale-verification-a-3-niveaux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RM-177 — Uptale : vérification à 3 niveaux
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href=".." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Accueil
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../17-headset-center/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Applications & Composants
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="application-web-blazor-v40">Application Web — Blazor <code>[v4.0]</code><a class="headerlink" href="#application-web-blazor-v40" title="Permanent link">&para;</a></h1>
+<p>Frontend <strong>Blazor WebAssembly</strong>.<br />
+Couvre : gestion des sessions, validations de formulaire, routage, stockage local et temps réel.</p>
+<hr />
+<h2 id="gestion-des-tokens-sessions">Gestion des tokens &amp; sessions<a class="headerlink" href="#gestion-des-tokens-sessions" title="Permanent link">&para;</a></h2>
+<h3 id="rm-143-delai-de-grace-dexpiration-30-secondes">RM-143 — Délai de grâce d'expiration : 30 secondes<a class="headerlink" href="#rm-143-delai-de-grace-dexpiration-30-secondes" title="Permanent link">&para;</a></h3>
+<p>Un token d'accès est considéré expiré <strong>30 secondes avant</strong> son expiration réelle.<br />
+S'applique au cache mémoire <strong>et</strong> au localStorage.</p>
+<hr />
+<h3 id="rm-144-renouvellement-du-token-mutex-pas-de-concurrence">RM-144 — Renouvellement du token : mutex (pas de concurrence)<a class="headerlink" href="#rm-144-renouvellement-du-token-mutex-pas-de-concurrence" title="Permanent link">&para;</a></h3>
+<p>Flag <code>_externalTokenRefreshInProgress</code> : si un renouvellement est en cours, les autres demandes reçoivent immédiatement <code>TokenResult.Unavailable()</code>.</p>
+<hr />
+<h3 id="rm-145-ordre-de-resolution-du-token">RM-145 — Ordre de résolution du token<a class="headerlink" href="#rm-145-ordre-de-resolution-du-token" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Cache <strong>mémoire</strong></li>
+<li><strong>localStorage</strong> (token externe)</li>
+<li>Token <strong>OIDC</strong> standard</li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Si un token OIDC valide <strong>et</strong> un token externe sont tous deux présents → le localStorage est nettoyé et l'utilisateur est redirigé vers la connexion.</p>
+</div>
+<hr />
+<h3 id="rm-146-rehydratation-de-session-multi-onglet">RM-146 — Réhydratation de session multi-onglet<a class="headerlink" href="#rm-146-rehydratation-de-session-multi-onglet" title="Permanent link">&para;</a></h3>
+<p>Si un nouvel onglet détecte un token valide mais un localStorage vide (<code>currentVersion</code> ET <code>userRight</code> absents) → <code>GetUserProfileInfos</code> est rappelé pour reconstruire le contexte.</p>
+<hr />
+<h2 id="authentification-autorisation">Authentification &amp; Autorisation<a class="headerlink" href="#authentification-autorisation" title="Permanent link">&para;</a></h2>
+<h3 id="rm-147-sources-dauthentification-autorisees">RM-147 — Sources d'authentification autorisées<a class="headerlink" href="#rm-147-sources-dauthentification-autorisees" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Source</th>
+<th>Condition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>local</code></td>
+<td>Toujours autorisée</td>
+</tr>
+<tr>
+<td><code>google</code></td>
+<td>Domaine <code>vr-connection.com</code> uniquement</td>
+</tr>
+<tr>
+<td><code>EducNat</code></td>
+<td>Toujours autorisée</td>
+</tr>
+</tbody>
+</table>
+<p>Toute autre source → redirection vers <code>unauthorized</code>.</p>
+<hr />
+<h3 id="rm-148-mode-querytoken-bypass-oidc">RM-148 — Mode <code>queryToken</code> : bypass OIDC<a class="headerlink" href="#rm-148-mode-querytoken-bypass-oidc" title="Permanent link">&para;</a></h3>
+<p>Un paramètre GET <code>queryToken</code> valide permet une authentification sans flux OIDC.<br />
+Tout token OIDC existant est nettoyé. Utilisé pour les <strong>intégrations externes</strong>.</p>
+<hr />
+<h3 id="rm-149-verification-hierarchique-des-roles">RM-149 — Vérification hiérarchique des rôles<a class="headerlink" href="#rm-149-verification-hierarchique-des-roles" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>CurrentUserType.BaseUserType &lt;= RequiredUserType
+</code></pre></div>
+<p>Un Admin (1) accède à tout ce qui requiert CompanyOwner (2), DGSManager (4), etc.</p>
+<hr />
+<h3 id="rm-150-admin-exempte-de-la-verification-de-module">RM-150 — Admin exempté de la vérification de module<a class="headerlink" href="#rm-150-admin-exempte-de-la-verification-de-module" title="Permanent link">&para;</a></h3>
+<p>Les utilisateurs <code>Admin</code> contournent la vérification d'activation de module.<br />
+Un Admin voit <strong>tous les modules</strong> indépendamment de leur état.</p>
+<hr />
+<h3 id="rm-151-operateurs-andor-pour-les-verifications-multi-droits">RM-151 — Opérateurs AND/OR pour les vérifications multi-droits<a class="headerlink" href="#rm-151-operateurs-andor-pour-les-verifications-multi-droits" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Opérateur</th>
+<th>Condition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Or</code> (défaut)</td>
+<td>Au moins un droit requis</td>
+</tr>
+<tr>
+<td><code>And</code></td>
+<td>Tous les droits requis</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="rm-152-impersonation-producer-et-user-exclus">RM-152 — Impersonation : Producer et User exclus<a class="headerlink" href="#rm-152-impersonation-producer-et-user-exclus" title="Permanent link">&para;</a></h3>
+<p>La fonctionnalité d'impersonation est réservée aux rôles :<br />
+Admin · CompanyOwner · DeviceGroupSetManager · DeviceGroupManager</p>
+<hr />
+<h2 id="validations-de-formulaires">Validations de formulaires<a class="headerlink" href="#validations-de-formulaires" title="Permanent link">&para;</a></h2>
+<h3 id="rm-153-asset-company-obligatoire-pour-les-non-admin">RM-153 — Asset : company obligatoire pour les non-Admin<a class="headerlink" href="#rm-153-asset-company-obligatoire-pour-les-non-admin" title="Permanent link">&para;</a></h3>
+<p>Lors de la création d'un asset, si le créateur n'est pas Admin, une <strong>company doit être sélectionnée</strong>.</p>
+<h3 id="rm-154-tags-dasset-obligatoires-si-categorie-selectionnee">RM-154 — Tags d'asset obligatoires si catégorie sélectionnée<a class="headerlink" href="#rm-154-tags-dasset-obligatoires-si-categorie-selectionnee" title="Permanent link">&para;</a></h3>
+<p>Si une <code>AssetCategory</code> est sélectionnée ET que des tags sont disponibles → <strong>au moins un tag doit être coché</strong>.</p>
+<h3 id="rm-155-nombre-de-joueurs-plage-1-100">RM-155 — Nombre de joueurs : plage [1, 100]<a class="headerlink" href="#rm-155-nombre-de-joueurs-plage-1-100" title="Permanent link">&para;</a></h3>
+<p><code>MinPlayerCount</code> et <code>MaxPlayerCount</code> sont contraints à <strong>[1, 100]</strong>.</p>
+<h3 id="rm-156-formats-de-binaires-par-type-dexperience">RM-156 — Formats de binaires par type d'expérience<a class="headerlink" href="#rm-156-formats-de-binaires-par-type-dexperience" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Extensions acceptées</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Vidéo 360</td>
+<td><code>.mov</code>, <code>.mp4</code>, <code>.avi</code>, <code>.wmv</code>, <code>.flv</code>, <code>.3gp</code>, <code>.webm</code></td>
+</tr>
+<tr>
+<td>VR / WebGL</td>
+<td><code>.zip</code> uniquement</td>
+</tr>
+<tr>
+<td>Audio externe</td>
+<td><code>.mp3</code> uniquement</td>
+</tr>
+<tr>
+<td>Vidéo externe</td>
+<td><code>.mp4</code> uniquement</td>
+</tr>
+</tbody>
+</table>
+<h3 id="rm-157-externalapplicationtype-obligatoire">RM-157 — <code>ExternalApplicationType</code> obligatoire<a class="headerlink" href="#rm-157-externalapplicationtype-obligatoire" title="Permanent link">&para;</a></h3>
+<p>Si type = <code>ExternalApplication</code> → <code>ExternalApplicationType</code> doit être sélectionné.</p>
+<h3 id="rm-158-conversion-automatique-srt-vtt">RM-158 — Conversion automatique SRT → VTT<a class="headerlink" href="#rm-158-conversion-automatique-srt-vtt" title="Permanent link">&para;</a></h3>
+<p>Lors de l'upload d'un fichier <code>.srt</code> : le navigateur le convertit automatiquement en <code>.vtt</code> et uploade les <strong>deux fichiers</strong>.<br />
+L'opération est transparente pour l'utilisateur.</p>
+<h3 id="rm-159-limite-dupload-client-2-go">RM-159 — Limite d'upload client : 2 Go<a class="headerlink" href="#rm-159-limite-dupload-client-2-go" title="Permanent link">&para;</a></h3>
+<p>Tout fichier dépassant <strong>2 Go</strong> est rejeté avant l'ouverture du stream.</p>
+<h3 id="rm-160-screenshots-dexperience-formats-image-uniquement">RM-160 — Screenshots d'expérience : formats image uniquement<a class="headerlink" href="#rm-160-screenshots-dexperience-formats-image-uniquement" title="Permanent link">&para;</a></h3>
+<p>Extensions acceptées : <code>.jpg</code>, <code>.png</code>, <code>.jpeg</code>, <code>.svg</code><br />
+Tout autre format → rejeté avec <code>"Only images are allowed"</code></p>
+<h3 id="rm-161-nombre-maximum-de-screenshots-dasset">RM-161 — Nombre maximum de screenshots d'asset<a class="headerlink" href="#rm-161-nombre-maximum-de-screenshots-dasset" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Type d'asset</th>
+<th>Max screenshots</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Asset2D, VFX, Video, Audio</td>
+<td><strong>1</strong></td>
+</tr>
+<tr>
+<td>Package, Asset3D</td>
+<td><strong>5</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="routage-navigation">Routage &amp; Navigation<a class="headerlink" href="#routage-navigation" title="Permanent link">&para;</a></h2>
+<h3 id="rm-162-page-daccueil-selon-le-role">RM-162 — Page d'accueil selon le rôle<a class="headerlink" href="#rm-162-page-daccueil-selon-le-role" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Rôle</th>
+<th>Page d'accueil</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Producer</td>
+<td><code>/experience/manage</code></td>
+</tr>
+<tr>
+<td>User</td>
+<td><code>/experience/catalog-webgl</code> (si module actif) ou <code>/experience/index</code></td>
+</tr>
+<tr>
+<td>Admin</td>
+<td><code>/admin/index</code></td>
+</tr>
+<tr>
+<td>CompanyOwner/Managers</td>
+<td>Analysé par droits (DeviceGroup, Experience, User, Device)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="rm-163-appareils-filtres-par-compatibilite-binaire">RM-163 — Appareils filtrés par compatibilité binaire<a class="headerlink" href="#rm-163-appareils-filtres-par-compatibilite-binaire" title="Permanent link">&para;</a></h3>
+<p>Lors de la sélection d'appareils pour lancer une expérience, seuls les appareils dont le <code>DeviceStandaloneType</code> correspond aux types de binaires <strong>Standalone</strong> ou <strong>Video360</strong> de cette expérience sont affichés.</p>
+<h3 id="rm-164-url-de-retour-sauvegardee-avant-redirection">RM-164 — URL de retour sauvegardée avant redirection<a class="headerlink" href="#rm-164-url-de-retour-sauvegardee-avant-redirection" title="Permanent link">&para;</a></h3>
+<p>L'URL courante est sauvegardée en localStorage avant redirection vers la connexion.<br />
+Après authentification → l'utilisateur est renvoyé vers cette URL.</p>
+<h3 id="rm-165-module-lemonlearning">RM-165 — Module LemonLearning<a class="headerlink" href="#rm-165-module-lemonlearning" title="Permanent link">&para;</a></h3>
+<p>Si la company a le module LemonLearning activé → données utilisateur (nom, email, rôle, OFA, CFA) transmises à un <strong>script tiers chargé de manière asynchrone</strong>.</p>
+<hr />
+<h2 id="temps-reel-signalr-cote-client">Temps réel — SignalR côté client<a class="headerlink" href="#temps-reel-signalr-cote-client" title="Permanent link">&para;</a></h2>
+<h3 id="rm-166-reconnexion-backoff-exponentiel-2n-secondes-max-60s">RM-166 — Reconnexion : backoff exponentiel 2ⁿ secondes, max 60s<a class="headerlink" href="#rm-166-reconnexion-backoff-exponentiel-2n-secondes-max-60s" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Délai : <strong>2ⁿ secondes</strong> (n = nombre de tentatives)</li>
+<li>Maximum : <strong>60 secondes</strong></li>
+<li>Politique : <strong>infinie</strong> (<code>InfiniteRetryPolicy</code>)</li>
+</ul>
+<h3 id="rm-167-suivi-des-ack-par-commande">RM-167 — Suivi des ACK par commande<a class="headerlink" href="#rm-167-suivi-des-ack-par-commande" title="Permanent link">&para;</a></h3>
+<p>Chaque commande envoyée est enregistrée dans un <code>AckTracker</code>.<br />
+Lorsqu'un ACK est reçu → il est associé à la commande originale.</p>
+<h3 id="rm-168-etat-de-casting-par-appareil">RM-168 — État de casting par appareil<a class="headerlink" href="#rm-168-etat-de-casting-par-appareil" title="Permanent link">&para;</a></h3>
+<p>Un objet <code>DeviceCastingState</code> maintient le flag <code>IsCasting</code> par appareil.<br />
+À l'arrêt du cast → événement <code>StopCast</code> transmis via SignalR.</p>
+<hr />
+<h2 id="stockage-local-localstorage">Stockage local (localStorage)<a class="headerlink" href="#stockage-local-localstorage" title="Permanent link">&para;</a></h2>
+<h3 id="rm-169-profil-utilisateur-mis-en-cache">RM-169 — Profil utilisateur mis en cache<a class="headerlink" href="#rm-169-profil-utilisateur-mis-en-cache" title="Permanent link">&para;</a></h3>
+<p>Données stockées après authentification :</p>
+<p><code>userType</code> · <code>companyId</code> · <code>deviceGroupId</code> · <code>deviceGroupSetId</code> · <code>email</code> · <code>userName</code> · <code>profilePicture</code> · <code>theme</code> · modules activés (<code>StandaloneModule</code>, <code>AssetsLibraryModule</code>, <code>CatalogWebGLModule</code>, <code>DoubleLogoModule</code>, <code>StatisticsModule</code>) · <code>isAdmin</code> · <code>IsImpersonated</code></p>
+<h3 id="rm-170-admin-statisticsmodule-true-toujours">RM-170 — Admin : <code>StatisticsModule = true</code> toujours<a class="headerlink" href="#rm-170-admin-statisticsmodule-true-toujours" title="Permanent link">&para;</a></h3>
+<p>Pour les utilisateurs Admin, <code>StatisticsModule = true</code> est défini <strong>inconditionnellement</strong>.</p>
+<h3 id="rm-171-likes-mis-en-cache">RM-171 — Likes mis en cache<a class="headerlink" href="#rm-171-likes-mis-en-cache" title="Permanent link">&para;</a></h3>
+<p>Clé localStorage : <code>ExperienceUserLikes</code><br />
+À chaque modification → le cache est mis à jour (remplacement si existant, ajout sinon).</p>
+<h3 id="rm-172-langue-defaut-fr-fr-persistee">RM-172 — Langue : défaut <code>fr-FR</code>, persistée<a class="headerlink" href="#rm-172-langue-defaut-fr-fr-persistee" title="Permanent link">&para;</a></h3>
+<p>La langue est lue depuis localStorage.<br />
+Si absente → <code>fr-FR</code> par défaut.<br />
+Sauvegardée via <code>blazorCulture.set</code>.</p>
+<h3 id="rm-173-panier-dassets-persiste">RM-173 — Panier d'assets persisté<a class="headerlink" href="#rm-173-panier-dassets-persiste" title="Permanent link">&para;</a></h3>
+<p>La sélection d'assets dans le panier est sauvegardée et restaurée à la session suivante.</p>
+<h3 id="rm-174-acceptation-des-cgu-persistee">RM-174 — Acceptation des CGU persistée<a class="headerlink" href="#rm-174-acceptation-des-cgu-persistee" title="Permanent link">&para;</a></h3>
+<p>L'état d'acceptation des CGU et sa date sont stockés en localStorage (évite de reproposer à chaque reconnexion).</p>
+<hr />
+<h2 id="recherche">Recherche<a class="headerlink" href="#recherche" title="Permanent link">&para;</a></h2>
+<h3 id="rm-175-suppression-des-diacritiques">RM-175 — Suppression des diacritiques<a class="headerlink" href="#rm-175-suppression-des-diacritiques" title="Permanent link">&para;</a></h3>
+<p>Les requêtes de recherche sont normalisées côté client : les accents sont supprimés (<code>é → e</code>, <code>à → a</code>, etc.) avant comparaison.</p>
+<hr />
+<h2 id="comportements-ui">Comportements UI<a class="headerlink" href="#comportements-ui" title="Permanent link">&para;</a></h2>
+<h3 id="rm-176-message-de-succes-masque-apres-2-secondes">RM-176 — Message de succès masqué après 2 secondes<a class="headerlink" href="#rm-176-message-de-succes-masque-apres-2-secondes" title="Permanent link">&para;</a></h3>
+<p>Après une action réussie → message affiché puis masqué automatiquement après <strong>2 secondes</strong> via <code>Task.Delay(2000)</code>.</p>
+<h3 id="rm-177-uptale-verification-a-3-niveaux">RM-177 — Uptale : vérification à 3 niveaux<a class="headerlink" href="#rm-177-uptale-verification-a-3-niveaux" title="Permanent link">&para;</a></h3>
+<p>Le module Uptale est actif uniquement si <strong>les 3 conditions sont réunies</strong> :</p>
+<ol>
+<li>La company a le module Uptale activé</li>
+<li>Le DeviceGroupSet a <code>IsUptaleEnabled = true</code></li>
+<li>Le DeviceGroup hérite de <code>IsUptaleEnabled</code> via son DGS</li>
+</ol>
+<p>Un seul niveau manquant → <strong>module désactivé</strong> pour l'utilisateur.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.path", "navigation.indexes", "toc.follow", "search.highlight", "search.share", "content.code.copy", "content.tooltips"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
